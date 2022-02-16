@@ -11,12 +11,12 @@ class Application extends React.Component {
     }
   }
 
-  
-  generateQuote(event){
+  changeQuote(event){
     this.setState({
       currQuote: getQuote()
     });
   }
+
   render(){
     return (
       <div className="App">
@@ -27,7 +27,7 @@ class Application extends React.Component {
             <span class="quote-author">
               {this.state.currQuote.author}
             </span>
-          <button class="bigbutton" onClick={this.generateQuote.bind(this)}>New Quote</button>
+          <button class="bigbutton" onClick={this.changeQuote.bind(this)}>New Quote</button>
         </div>
       </div>
     )
