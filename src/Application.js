@@ -1,18 +1,20 @@
 import './Application.css';
 import React from 'react';
-import Quotes from './quotes';
+import {getQuote} from './quotes';
 
 class Application extends React.Component {
 
   constructor(props){
     super(props);
     this.state = {
-      currQuote: Quotes[Math.floor(Math.random() * Quotes.length)],
+      currQuote: getQuote(),
     }
   }
+
+  
   generateQuote(event){
     this.setState({
-      currQuote: Quotes[Math.floor(Math.random() * Quotes.length)]
+      currQuote: getQuote()
     });
   }
   render(){

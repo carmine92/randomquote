@@ -40,5 +40,9 @@ const Quotes = [
       quote:"I believe that children are our future. Unless we stop them now.",
       author:"Homer j. Simpson"
     }
-  ]
-  export default Quotes;
+  ];
+
+  function getQuote(){
+      return Quotes[Math.floor(Math.random() * Quotes.length)];
+  }
+  export { Quotes, getQuote };
